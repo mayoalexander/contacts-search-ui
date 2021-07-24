@@ -1,0 +1,277 @@
+[
+  {
+    "name": "Johnny Bisnow",
+    "email": "jb@bisnow.com",
+    "country": "US",
+    "city": "New York",
+    "state": "NY",
+    "postal_code": 12345,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "212",
+        "number": "1234567"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Bisnow",
+        "title": "QA Manager",
+        "classification": "Manager",
+        "industry": "Technology",
+        "primary": true
+      },
+      {
+        "company": "Bisnow Tech",
+        "title": "Custome Support",
+        "classification": "Assistant",
+        "industry": "Technology",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "name": "Joe Docker",
+    "email": "joedocker@docker.com",
+    "country": "US",
+    "city": "Madison",
+    "state": "WI",
+    "postal_code": 66236,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "847",
+        "number": "2234432"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Docker",
+        "title": "Engineer",
+        "classification": "Associate",
+        "industry": "Technology",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "name": "Stuart Scott",
+    "email": "stuart.scott@espn.com",
+    "country": "US",
+    "city": "Bristol",
+    "state": "CT",
+    "postal_code": 94714,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "200",
+        "number": "4338594"
+      }
+    ],
+    "employments": [
+      {
+        "company": "ESPN",
+        "title": "The Goat",
+        "classification": "Owner",
+        "industry": "Media",
+        "primary": true
+      },
+      {
+        "company": "ESPN",
+        "title": "Anchor",
+        "classification": "Analyst",
+        "industry": "Media",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "name": "Taylor Swift",
+    "email": "tswift@music.com",
+    "country": "US",
+    "city": "Nashville",
+    "state": "TN",
+    "postal_code": 44112,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "505",
+        "number": "3844930"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Taylor Swift Music",
+        "title": "Superstar",
+        "classification": "President",
+        "industry": "Music",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "name": "Lebron James",
+    "email": "lbj@nike.com",
+    "country": "US",
+    "city": "Beaverton",
+    "state": "OR",
+    "postal_code": 97005,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "909",
+        "number": "4437784"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Nike",
+        "title": "Basketball Player",
+        "classification": "MVP",
+        "industry": "Basketball",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "name": "Tom Brady",
+    "email": "tom.brady@tampa.com",
+    "country": "US",
+    "city": "Tampa Bay",
+    "state": "FL",
+    "postal_code": 42666,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "478",
+        "number": "1138899"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Tampa Bay Bucanneers",
+        "title": "Quarterback",
+        "classification": "MVP",
+        "industry": "Football",
+        "primary": true
+      },
+      {
+        "company": "New England Patriots",
+        "title": "Quarterback",
+        "classification": "MVP",
+        "industry": "Football",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "name": "Tim Cook",
+    "email": "tim@apple.com",
+    "country": "US",
+    "city": "Cupertino",
+    "state": "CA",
+    "postal_code": 55221,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "800",
+        "number": "5549302"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Apple",
+        "title": "Chief Executive Officer",
+        "classification": "CEO",
+        "industry": "Technology",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "name": "Taylor Otwell",
+    "email": "taylor.otwell@laravel.com",
+    "country": "US",
+    "city": "Little Rock",
+    "state": "AR",
+    "postal_code": 88832,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "890",
+        "number": "4395403"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Laravel",
+        "title": "Chief Executive Officer",
+        "classification": "CEO",
+        "industry": "Technology",
+        "primary": true
+      },
+      {
+        "company": "LinkedIn",
+        "title": "Software Engineer",
+        "classification": "Associate",
+        "industry": "Technology",
+        "primary": false
+      }
+    ]
+  },
+  {
+    "name": "Evan You",
+    "email": "evan.you@vuejs.com",
+    "country": "US",
+    "city": "Livingston",
+    "state": "NJ",
+    "postal_code": 67732,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "590",
+        "number": "3248859"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Vue Js",
+        "title": "Chief Technology Officer",
+        "classification": "CTO",
+        "industry": "Technology",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "name": "Elon Musk",
+    "email": "elan@tesla.com",
+    "country": "US",
+    "city": "Palo Alto",
+    "state": "CA",
+    "postal_code": 31124,
+    "phone": [
+      {
+        "country_code": "1",
+        "area_code": "949",
+        "number": "4389902"
+      }
+    ],
+    "employments": [
+      {
+        "company": "Tesla Motors",
+        "title": "Chief Executive Officer",
+        "classification": "CEO",
+        "industry": "Automotive",
+        "primary": true
+      },
+      {
+        "company": "Paypal",
+        "title": "Chief Technology Officer",
+        "classification": "CTO",
+        "industry": "Technology",
+        "primary": false
+      }
+    ]
+  }
+]
