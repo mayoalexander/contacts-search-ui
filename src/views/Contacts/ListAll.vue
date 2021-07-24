@@ -29,9 +29,6 @@ export default {
   },
   mounted () {
     this.allContacts = contacts
-    console.log({
-      contacts
-    })
   },
   computed: {
     filteredContacts () {
@@ -44,43 +41,53 @@ export default {
             item
           })
           let res = false
-          if (item.name.toLowerCase().indexOf(query) > -1) {
+          if (item.name.toLowerCase().includes(query)) {
             res = true
           }
           if (item.email
-            && item.email.toLowerCase().indexOf(query) > -1) {
+            && item.email.toLowerCase().includes(query)) {
             res = true
           }
           if (item.city
-            && item.city.toLowerCase().indexOf(query) > -1) {
+            && item.city.toLowerCase().includes(query)) {
             res = true
           }
           if (item.state
-            && item.state.toLowerCase().indexOf(query) > -1) {
+            && item.state.toLowerCase().includes(query)) {
             res = true
           }
           if (item.postal_code
-            && item.postal_code.toString().toLowerCase().indexOf(query) > -1) {
+            && item.postal_code.toString().toLowerCase().includes(query)) {
             res = true
           }
           if (item.keywords
-            && item.keywords.toLowerCase().indexOf(query) > -1) {
+            && item.keywords.toLowerCase().includes(query)) {
             res = true
           }
-          //
           if (item.employments
             && item.employments.length > 0) {
               item.employments.forEach((item) => {
-                if (item.title.toLowerCase().indexOf(query) > -1) {
+                if (item.title.toLowerCase().includes(query)) {
                   res = true
                 }
-                if (item.industry.toLowerCase().indexOf(query) > -1) {
+                if (item.industry.toLowerCase().includes(query)) {
                   res = true
                 }
-                if (item.company.toLowerCase().indexOf(query) > -1) {
+                if (item.company.toLowerCase().includes(query)) {
                   res = true
                 }
-                if (item.classification.toLowerCase().indexOf(query) > -1) {
+                if (item.classification.toLowerCase().includes(query)) {
+                  res = true
+                }
+              });
+          }
+          if (item.phone
+            && item.phone.length > 0) {
+              item.phone.forEach((item) => {
+                if (item.area_code.toLowerCase().includes(query)) {
+                  res = true
+                }
+                if (item.number.toLowerCase().includes(query)) {
                   res = true
                 }
               });
