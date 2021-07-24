@@ -67,6 +67,24 @@ export default {
             && item.keywords.toLowerCase().indexOf(query) > -1) {
             res = true
           }
+          //
+          if (item.employments
+            && item.employments.length > 0) {
+              item.employments.forEach((item) => {
+                if (item.title.toLowerCase().indexOf(query) > -1) {
+                  res = true
+                }
+                if (item.industry.toLowerCase().indexOf(query) > -1) {
+                  res = true
+                }
+                if (item.company.toLowerCase().indexOf(query) > -1) {
+                  res = true
+                }
+                if (item.classification.toLowerCase().indexOf(query) > -1) {
+                  res = true
+                }
+              });
+          }
           return res
         });
       }
