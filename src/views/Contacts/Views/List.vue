@@ -27,8 +27,13 @@
           <div class="employments">
             <h6 class="mb-0">Employments:</h6>
             <div v-for="(position, i) in item.employments" :key="i">
-              {{ position.title }} at {{ position.company }} - {{ position.classification }}
-              <span v-if="position.primary && item.employments.length > 1" class="text-muted">(Primary)</span>
+              {{ position.title }} at {{ position.company }} -
+              {{ position.classification }}
+              <span
+                v-if="position.primary && item.employments.length > 1"
+                class="text-muted"
+                >(Primary)</span
+              >
             </div>
           </div>
         </div>
@@ -44,7 +49,9 @@ export default {
   },
   methods: {
     formatPhone(phone) {
-      return ("+" + phone.country_code + " (" + phone.area_code + ") " + phone.number );
+      return (
+        "+" + phone.country_code + " (" + phone.area_code + ") " + phone.number
+      );
     },
   },
 };

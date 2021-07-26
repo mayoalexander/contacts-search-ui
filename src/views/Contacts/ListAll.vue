@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container">
-    <h4>this is the list all</h4>
+    <h2 class="text-left">All Contacts</h2>
     <div class="all-contacts mb-5">
       <list-controls />
 

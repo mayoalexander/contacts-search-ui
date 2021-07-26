@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="controls row mb-3">
-    <div class="col-md-9">
+    <div class="col-md-9 mb-2">
       <b-form-input
         v-model="$store.state.searchQuery"
         placeholder="Search anything.."
