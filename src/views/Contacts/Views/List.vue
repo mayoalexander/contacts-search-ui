@@ -40,7 +40,7 @@
           </div>
           <div class="col-md-2">
             <b-button
-              v-if="isSavedToBookmarks(item)"
+              v-if="!isSavedToBookmarks(item)"
               @click="toggleBookmark(item)"
               >Bookmark</b-button
             >
@@ -61,7 +61,7 @@ export default {
   methods: {
     toggleBookmark(item) {
       // save to bookmarks
-      this.$store.commit("ADD_BOOKMARK", item);
+      this.$store.commit("TOGGLE_BOOKMARK", item);
     },
     isSavedToBookmarks(item) {
       return this.$store.state.bookmarks.find(

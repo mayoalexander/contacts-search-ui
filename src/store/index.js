@@ -13,9 +13,11 @@ export default new Vuex.Store({
     SET_VIEW(state, payload) {
       state.view_type = payload;
     },
-    ADD_BOOKMARK(state, payload) {
+    TOGGLE_BOOKMARK(state, payload) {
       if (!state.bookmarks.find((item) => item.name === payload.name)) {
         state.bookmarks.push(payload);
+      } else {
+        state.bookmarks.splice(state.bookmarks.indexOf(payload), 1);
       }
     },
   },
