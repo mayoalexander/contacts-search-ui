@@ -1,11 +1,17 @@
 <template>
   <div id="app">
     <div id="nav" class="navigation-bar mb-5">
-      <div class="company-logo mb-2">
-        <img src="https://cdn.bisnow.net/bisnow-logos/bisnow-white.svg"/>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="company-logo mb-2">
+            <img src="https://cdn.bisnow.net/bisnow-logos/bisnow-white.svg" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/contacts">Contacts</router-link>
+        </div>
       </div>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/contacts">Contacts</router-link>
     </div>
     <router-view />
   </div>
