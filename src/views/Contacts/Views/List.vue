@@ -2,8 +2,8 @@
   <div class="">
     <b-list-group v-if="items && items.length > 0">
       <b-list-group-item v-for="(item, i) in items" :key="i">
-        <div class="row text-left">
-          <div class="col-md-6 mb-4">
+        <div class="row text-left pt-3">
+          <div class="col-md-6 mb-3">
             <h4 class="text-sm-left">
               {{ item.name }}
             </h4>

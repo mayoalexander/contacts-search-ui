@@ -30,6 +30,9 @@
   text-align: left !important;
 }
 
+a {
+  color: #f58320 !important;
+}
 #nav {
   padding: 30px;
   text-decoration: none !important;
