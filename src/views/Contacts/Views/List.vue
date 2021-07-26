@@ -3,7 +3,7 @@
     <b-list-group v-if="items && items.length > 0">
       <b-list-group-item v-for="(item, i) in items" :key="i">
         <div class="row text-left pt-3">
-          <div class="col-md-6 mb-3">
+          <div class="col-md-5 mb-3">
             <h4 class="text-sm-left">
               {{ item.name }}
             </h4>
@@ -24,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="employments">
               <h6 class="mb-0">Employments:</h6>
               <div v-for="(position, i) in item.employments" :key="i">
@@ -37,6 +37,14 @@
                 >
               </div>
             </div>
+          </div>
+          <div class="col-md-2">
+            <b-button
+              v-if="isSavedToBookmarks(item)"
+              @click="toggleBookmark(item)"
+              >Bookmark</b-button
+            >
+            <b-button v-else @click="toggleBookmark(item)">Unbookmark</b-button>
           </div>
         </div>
       </b-list-group-item>
@@ -51,6 +59,15 @@ export default {
     items: Array,
   },
   methods: {
+    toggleBookmark(item) {
+      // save to bookmarks
+      this.$store.commit("ADD_BOOKMARK", item);
+    },
+    isSavedToBookmarks(item) {
+      return this.$store.state.bookmarks.find(
+        (bookmark) => bookmark.name == item.name
+      );
+    },
     formatPhone(phone) {
       // compile
       phone =
