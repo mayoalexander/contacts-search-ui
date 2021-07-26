@@ -35,12 +35,24 @@ export default {
     // set default view
     this.$store.commit("SET_VIEW", "list");
   },
+  methods: {
+    getSearchQuery () {
+      return this.$store.state.searchQuery.trim().toLowerCase()
+    },
+    applyFiltersSorting (contacts) {
+      // filter by name
+      contacts = contacts.sort(function(a, b) { return a.name - b.name });
+
+      return contacts
+    }
+  },
   computed: {
     filteredContacts() {
       let filtered = this.allContacts;
-      const query = this.$store.state.searchQuery.trim().toLowerCase();
+      const query = this.getSearchQuery();
+      const allContacts = this.applyFiltersSorting(this.allContacts)
       if (query) {
-        filtered = this.allContacts.filter((item) => {
+        filtered = allContacts.filter((item) => {
           let res = false;
           if (item.name.toLowerCase().includes(query)) {
             res = true;
