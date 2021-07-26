@@ -36,21 +36,23 @@ export default {
     this.$store.commit("SET_VIEW", "list");
   },
   methods: {
-    getSearchQuery () {
-      return this.$store.state.searchQuery.trim().toLowerCase()
+    getSearchQuery() {
+      return this.$store.state.searchQuery.trim().toLowerCase();
     },
-    applyFiltersSorting (contacts) {
+    applyFiltersSorting(contacts) {
       // filter by name
-      contacts = contacts.sort(function(a, b) { return a.name - b.name });
+      contacts = contacts.sort(function (a, b) {
+        return a.name - b.name;
+      });
 
-      return contacts
-    }
+      return contacts;
+    },
   },
   computed: {
     filteredContacts() {
       let filtered = this.allContacts;
       const query = this.getSearchQuery();
-      const allContacts = this.applyFiltersSorting(this.allContacts)
+      const allContacts = this.applyFiltersSorting(this.allContacts);
       if (query) {
         filtered = allContacts.filter((item) => {
           let res = false;
