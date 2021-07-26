@@ -17,6 +17,10 @@
   color: #2c3e50;
 }
 
+.text-left {
+  text-align: left !important;
+}
+
 #nav {
   padding: 30px;
 

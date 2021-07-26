@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
     <h4>this is the list all</h4>
-    <div class="all-contacts">
+    <div class="all-contacts mb-5">
       <list-controls />
 
       <div v-if="$store.state.view_type === 'list'" class="list-view">
@@ -41,7 +41,6 @@ export default {
       const query = this.$store.state.searchQuery.trim().toLowerCase();
       if (query) {
         filtered = this.allContacts.filter((item) => {
-          // need to pull all data before removing
           let res = false;
           if (item.name.toLowerCase().includes(query)) {
             res = true;
