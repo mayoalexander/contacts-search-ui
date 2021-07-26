@@ -2,8 +2,7 @@
   <div class="container">
     <h4>this is the list all</h4>
     <div class="all-contacts">
-      <list-controls/>
-
+      <list-controls />
 
       <div v-if="$store.state.view_type === 'list'" class="list-view">
         <contacts-list-view :items="filteredContacts" />
@@ -23,18 +22,18 @@ import ListControls from "@/views/Contacts/Controls";
 export default {
   components: {
     ContactsListView,
-    ListControls
+    ListControls,
   },
   data() {
     return {
-      allContacts: []
+      allContacts: [],
     };
   },
   mounted() {
     this.allContacts = contacts;
 
     // set default view
-    this.$store.commit('SET_VIEW', 'list')
+    this.$store.commit("SET_VIEW", "list");
   },
   computed: {
     filteredContacts() {

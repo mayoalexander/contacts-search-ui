@@ -9,10 +9,9 @@
 <script>
 export default {
   props: {
-    items: Array
-  }
-}
+    items: Array,
+  },
+};
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>
