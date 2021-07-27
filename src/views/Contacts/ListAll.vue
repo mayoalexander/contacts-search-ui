@@ -47,6 +47,10 @@ export default {
         return false;
       }
 
+      // if filters are empty, search all parmeters
+      if (!searchBy[0]) { return true; }
+
+      // default searching via params
       const found = searchBy.find((item) => item === param);
       return found;
     },
@@ -127,12 +131,6 @@ export default {
           if (
             this.isFilterApplied("postal_code", item) &&
             item.postal_code.toString().toLowerCase().includes(query)
-          ) {
-            res = true;
-          }
-          if (
-            this.isFilterApplied("keywords", item) &&
-            item.keywords.toLowerCase().includes(query)
           ) {
             res = true;
           }
