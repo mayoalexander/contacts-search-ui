@@ -48,7 +48,9 @@ export default {
       }
 
       // if filters are empty, search all parmeters
-      if (!searchBy[0]) { return true; }
+      if (!searchBy[0]) {
+        return true;
+      }
 
       // default searching via params
       const found = searchBy.find((item) => item === param);

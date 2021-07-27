@@ -4,13 +4,14 @@
       <b-form-input
         v-model="$store.state.searchQuery"
         :placeholder="'Search ' + searchType + '..'"
+        :state="validation"
         :class="{
-          'invalid-form': !isValid,
-          'valid-form': isValid,
+          'invalid-form': !isValid && $store.state.searchQuery.length > minNumCharacters,
+          'valid-form': isValid && $store.state.searchQuery.length > minNumCharacters,
         }"
       ></b-form-input>
       <div
-        v-if="searchType === 'email' && $store.state.searchQuery.length > 3"
+        v-if="searchType === 'email' && $store.state.searchQuery.length > minNumCharacters"
         class="text-left"
       >
         <b-form-invalid-feedback :state="isValid">
@@ -72,6 +73,7 @@
 export default {
   data() {
     return {
+      minNumCharacters: 3,
       sortBy: null,
       searchType: "email",
       searchOptions: [
@@ -124,4 +126,8 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.invalid-form {
+  border: 1px solid red !important;
+}
+</style>
