@@ -8,6 +8,10 @@
         <contacts-list-view :items="filteredContacts" />
       </div>
 
+      <div v-if="$store.state.view_type === 'bookmarks'" class="list-view">
+        <contacts-list-view :items="$store.state.bookmarks" />
+      </div>
+
       <div v-if="$store.state.view_type === 'table'" class="list-view">
         <b-table striped hover :items="filteredContacts"></b-table>
       </div>
@@ -35,12 +39,59 @@ export default {
     // set default view
     this.$store.commit("SET_VIEW", "list");
   },
+  methods: {
+    getSearchQuery() {
+      return this.$store.state.searchQuery.trim().toLowerCase();
+    },
+    applyFiltersSorting(contacts) {
+      const sortBy = this.$store.state.sortBy;
+
+      // // sort by name
+      if (!sortBy || sortBy === "name") {
+        contacts.sort(function (a, b) {
+          var textA = a.name.toUpperCase();
+          var textB = b.name.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
+        });
+      }
+
+      // // sort by phone
+      if (sortBy === "phone") {
+        contacts.sort(function (a, b) {
+          var textA = a.phone[0].area_code.toUpperCase();
+          var textB = b.phone[0].area_code.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
+        });
+      }
+
+      // // sort by city
+      if (sortBy === "city") {
+        contacts.sort(function (a, b) {
+          var textA = a.city.toUpperCase();
+          var textB = b.city.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
+        });
+      }
+
+      // // sort by state
+      if (sortBy === "state") {
+        contacts.sort(function (a, b) {
+          var textA = a.state.toUpperCase();
+          var textB = b.state.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
+        });
+      }
+
+      return contacts;
+    },
+  },
   computed: {
     filteredContacts() {
       let filtered = this.allContacts;
-      const query = this.$store.state.searchQuery.trim().toLowerCase();
+      const query = this.getSearchQuery();
+      const allContacts = this.applyFiltersSorting(this.allContacts);
       if (query) {
-        filtered = this.allContacts.filter((item) => {
+        filtered = allContacts.filter((item) => {
           let res = false;
           if (item.name.toLowerCase().includes(query)) {
             res = true;
