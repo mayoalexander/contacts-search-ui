@@ -38,13 +38,16 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 mb-3">
+          <div class="col-md-2 mb-3 text-right">
             <b-button
               v-if="!isSavedToBookmarks(item)"
               @click="toggleBookmark(item)"
+              size="sm"
               >Bookmark</b-button
             >
-            <b-button v-else @click="toggleBookmark(item)">Unbookmark</b-button>
+            <b-button v-else size="sm" @click="toggleBookmark(item)">
+              Unbookmark
+            </b-button>
           </div>
         </div>
       </b-list-group-item>

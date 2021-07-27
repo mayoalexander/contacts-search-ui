@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <div id="nav" class="navigation-bar mb-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="company-logo mb-2">
-            <img src="https://cdn.bisnow.net/bisnow-logos/bisnow-white.svg" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/contacts">Contacts</router-link>
-        </div>
+      <div class="container">
+        <b-row align-v="center">
+          <b-col class="text-left">
+            <div class="company-logo mb-2">
+              <img src="https://cdn.bisnow.net/bisnow-logos/bisnow-white.svg" />
+            </div>
+          </b-col>
+          <b-col class="text-right">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/contacts">Contacts</router-link>
+          </b-col>
+        </b-row>
       </div>
     </div>
     <router-view />
@@ -30,6 +32,10 @@
   text-align: left !important;
 }
 
+.text-right {
+  text-align: right !important;
+}
+
 // a {
 //   color: #f58320 !important;
 // }
@@ -42,7 +48,7 @@
 
     &.router-link-exact-active {
       // color: #f58320;
-      color: #fff;
+      color: #fff !important;
     }
   }
 }

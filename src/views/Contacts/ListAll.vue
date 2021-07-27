@@ -40,17 +40,17 @@ export default {
       return this.$store.state.searchQuery.trim().toLowerCase();
     },
     applyFiltersSorting(contacts) {
-      const sortBy = this.$store.state.sortBy
+      const sortBy = this.$store.state.sortBy;
 
       // sort by name
-      if (!sortBy || sortBy === 'name') {
+      if (!sortBy || sortBy === "name") {
         contacts = contacts.sort(function (a, b) {
           return a.name - b.name;
         });
       }
-      
+
       // sort by phone
-      if (sortBy === 'phone') {
+      if (sortBy === "phone") {
         contacts = contacts.sort(function (a, b) {
           return a.phone[0].number - b.phone[0].number;
         });

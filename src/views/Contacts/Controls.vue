@@ -14,8 +14,13 @@
     </div>
     <div class="col-md-12 text-left pt-2">
       <label class="mb-0">Sort by:</label>
-      <div class="">
-        <b-form-select @change="setSorting()" v-model="sortBy" :options="sortingOptions" class="mt-0"></b-form-select>
+      <div class="text-rigt">
+        <b-form-select
+          @change="setSorting()"
+          v-model="sortBy"
+          :options="sortingOptions"
+          class="mt-0"
+        ></b-form-select>
       </div>
     </div>
   </div>
@@ -23,24 +28,24 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       sortBy: null,
       sortingOptions: [
-        { value: null, text: 'Please select an option' },
-        { value: 'name', text: 'Name' },
-        { value: 'phone', text: 'Phone' },
-        { value: 'city', text: 'City' },
-        { value: 'state', text: 'State' }
-      ]
-    }
+        { value: null, text: "Please select an option" },
+        { value: "name", text: "Name" },
+        { value: "phone", text: "Phone" },
+        { value: "city", text: "City" },
+        { value: "state", text: "State" },
+      ],
+    };
   },
   methods: {
-    setSorting () {
-      const value = this.sortBy
-      this.$store.commit('SET_SORT_BY', value)
-    }
-  }
+    setSorting() {
+      const value = this.sortBy;
+      this.$store.commit("SET_SORT_BY", value);
+    },
+  },
 };
 </script>
 
