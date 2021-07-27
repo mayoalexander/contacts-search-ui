@@ -12,9 +12,6 @@
         <contacts-list-view :items="$store.state.bookmarks" />
       </div>
 
-      <div v-if="$store.state.view_type === 'table'" class="list-view">
-        <b-table striped hover :items="filteredContacts"></b-table>
-      </div>
     </div>
   </div>
 </template>
