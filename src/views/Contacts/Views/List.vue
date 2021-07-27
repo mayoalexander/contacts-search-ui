@@ -43,7 +43,7 @@
               v-if="!isSavedToBookmarks(item)"
               @click="toggleBookmark(item)"
               size="sm"
-              >Bookmark</b-button
+              >Add to Bookmarks</b-button
             >
             <b-button v-else size="sm" @click="toggleBookmark(item)">
               Unbookmark
@@ -52,7 +52,14 @@
         </div>
       </b-list-group-item>
     </b-list-group>
-    <div v-else class="text-muted">No contacts found..</div>
+    <div v-else class="text-muted mt-3">
+      No contacts found..
+      <div v-if="$store.state.view_type === 'bookmarks'" class="mt-2">
+        <b-button size="sm" @click="$store.commit('SET_VIEW', 'list')">
+          Go Back
+        </b-button>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -8,6 +8,10 @@
         <contacts-list-view :items="filteredContacts" />
       </div>
 
+      <div v-if="$store.state.view_type === 'bookmarks'" class="list-view">
+        <contacts-list-view :items="$store.state.bookmarks" />
+      </div>
+
       <div v-if="$store.state.view_type === 'table'" class="list-view">
         <b-table striped hover :items="filteredContacts"></b-table>
       </div>
