@@ -30,15 +30,15 @@
   text-align: left !important;
 }
 
-a {
-  color: #f58320 !important;
-}
+// a {
+//   color: #f58320 !important;
+// }
 #nav {
   padding: 30px;
   text-decoration: none !important;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #2c3e50 !important;
 
     &.router-link-exact-active {
       // color: #f58320;

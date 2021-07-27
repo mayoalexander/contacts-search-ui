@@ -12,11 +12,36 @@
         <b-button @click="$store.commit('SET_VIEW', 'table')">Table</b-button>
       </b-button-group>
     </div>
+    <div class="col-md-12 text-left pt-2">
+      <label class="mb-0">Sort by:</label>
+      <div class="">
+        <b-form-select @change="setSorting()" v-model="sortBy" :options="sortingOptions" class="mt-0"></b-form-select>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data () {
+    return {
+      sortBy: null,
+      sortingOptions: [
+        { value: null, text: 'Please select an option' },
+        { value: 'name', text: 'Name' },
+        { value: 'phone', text: 'Phone' },
+        { value: 'city', text: 'City' },
+        { value: 'state', text: 'State' }
+      ]
+    }
+  },
+  methods: {
+    setSorting () {
+      const value = this.sortBy
+      this.$store.commit('SET_SORT_BY', value)
+    }
+  }
+};
 </script>
 
 <style lang="css" scoped></style>

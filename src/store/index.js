@@ -8,10 +8,14 @@ export default new Vuex.Store({
     searchQuery: "",
     view_type: "",
     bookmarks: [],
+    sortBy: null,
   },
   mutations: {
     SET_VIEW(state, payload) {
       state.view_type = payload;
+    },
+    SET_SORT_BY(state, payload) {
+      state.sortBy = payload;
     },
     TOGGLE_BOOKMARK(state, payload) {
       if (!state.bookmarks.find((item) => item.name === payload.name)) {

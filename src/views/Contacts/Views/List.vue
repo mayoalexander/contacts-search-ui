@@ -24,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 mb-2">
             <div class="employments">
               <h6 class="mb-0">Employments:</h6>
               <div v-for="(position, i) in item.employments" :key="i">
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 mb-3">
             <b-button
               v-if="!isSavedToBookmarks(item)"
               @click="toggleBookmark(item)"
