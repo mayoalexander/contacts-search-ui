@@ -5,11 +5,14 @@
         v-model="$store.state.searchQuery"
         :placeholder="'Search ' + searchType + '..'"
         :class="{
-          'invalid-form' : !isValid,
-          'valid-form' : isValid
+          'invalid-form': !isValid,
+          'valid-form': isValid,
         }"
       ></b-form-input>
-      <div v-if="searchType === 'email' && $store.state.searchQuery.length > 3" class="text-left">
+      <div
+        v-if="searchType === 'email' && $store.state.searchQuery.length > 3"
+        class="text-left"
+      >
         <b-form-invalid-feedback :state="isValid">
           You must enter a valid email!
         </b-form-invalid-feedback>
@@ -89,9 +92,9 @@ export default {
       ],
     };
   },
-  mounted () {
+  mounted() {
     // set default search to email
-    this.setSearchBy('email');
+    this.setSearchBy("email");
   },
   computed: {
     isValid() {

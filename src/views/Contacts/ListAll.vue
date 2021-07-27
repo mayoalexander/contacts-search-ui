@@ -11,7 +11,6 @@
       <div v-if="$store.state.view_type === 'bookmarks'" class="list-view">
         <contacts-list-view :items="$store.state.bookmarks" />
       </div>
-
     </div>
   </div>
 </template>
@@ -40,14 +39,16 @@ export default {
     getSearchQuery() {
       return this.$store.state.searchQuery.trim().toLowerCase();
     },
-    isFilterApplied (param, item) {
-      const searchBy = this.$store.state.searchBy
+    isFilterApplied(param, item) {
+      const searchBy = this.$store.state.searchBy;
 
       // if object empty, return false
-      if (item && item.length > 0 && !item[param]) { return false; }
+      if (item && item.length > 0 && !item[param]) {
+        return false;
+      }
 
-      const found = searchBy.find(item => item === param)
-      return found
+      const found = searchBy.find((item) => item === param);
+      return found;
     },
     applyFiltersSorting(contacts) {
       const sortBy = this.$store.state.sortBy;
@@ -99,25 +100,46 @@ export default {
       if (query) {
         filtered = allContacts.filter((item) => {
           let res = false;
-          if (this.isFilterApplied('name', item) && item.name.toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("name", item) &&
+            item.name.toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('email', item) && item.email.toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("email", item) &&
+            item.email.toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('city', item) && item.city.toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("city", item) &&
+            item.city.toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('state', item) && item.state.toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("state", item) &&
+            item.state.toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('postal_code', item) && item.postal_code.toString().toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("postal_code", item) &&
+            item.postal_code.toString().toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('keywords', item) && item.keywords.toLowerCase().includes(query)) {
+          if (
+            this.isFilterApplied("keywords", item) &&
+            item.keywords.toLowerCase().includes(query)
+          ) {
             res = true;
           }
-          if (this.isFilterApplied('employments', item) && item.employments.length > 0) {
+          if (
+            this.isFilterApplied("employments", item) &&
+            item.employments.length > 0
+          ) {
             item.employments.forEach((item) => {
               if (item.title.toLowerCase().includes(query)) {
                 res = true;
@@ -133,7 +155,7 @@ export default {
               }
             });
           }
-          if (this.isFilterApplied('phone', item) && item.phone.length > 0) {
+          if (this.isFilterApplied("phone", item) && item.phone.length > 0) {
             item.phone.forEach((item) => {
               if (item.area_code.toLowerCase().includes(query)) {
                 res = true;
