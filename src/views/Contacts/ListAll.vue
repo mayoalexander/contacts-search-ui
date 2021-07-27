@@ -48,37 +48,37 @@ export default {
 
       // // sort by name
       if (!sortBy || sortBy === "name") {
-        contacts.sort(function(a, b) {
-            var textA = a.name.toUpperCase();
-            var textB = b.name.toUpperCase();
-            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        contacts.sort(function (a, b) {
+          var textA = a.name.toUpperCase();
+          var textB = b.name.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
         });
       }
 
       // // sort by phone
       if (sortBy === "phone") {
-        contacts.sort(function(a, b) {
-            var textA = a.phone[0].area_code.toUpperCase();
-            var textB = b.phone[0].area_code.toUpperCase();
-            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        contacts.sort(function (a, b) {
+          var textA = a.phone[0].area_code.toUpperCase();
+          var textB = b.phone[0].area_code.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
         });
       }
 
       // // sort by city
       if (sortBy === "city") {
-        contacts.sort(function(a, b) {
-            var textA = a.city.toUpperCase();
-            var textB = b.city.toUpperCase();
-            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        contacts.sort(function (a, b) {
+          var textA = a.city.toUpperCase();
+          var textB = b.city.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
         });
       }
 
       // // sort by state
       if (sortBy === "state") {
-        contacts.sort(function(a, b) {
-            var textA = a.state.toUpperCase();
-            var textB = b.state.toUpperCase();
-            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        contacts.sort(function (a, b) {
+          var textA = a.state.toUpperCase();
+          var textB = b.state.toUpperCase();
+          return textA < textB ? -1 : textA > textB ? 1 : 0;
         });
       }
 
