@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     searchQuery: "",
+    searchBy: [],
     view_type: "",
     bookmarks: [],
     sortBy: null,
@@ -16,6 +17,9 @@ export default new Vuex.Store({
     },
     SET_SORT_BY(state, payload) {
       state.sortBy = payload;
+    },
+    SET_SEARCH_BY(state, payload) {
+      state.searchBy = [payload];
     },
     TOGGLE_BOOKMARK(state, payload) {
       if (!state.bookmarks.find((item) => item.name === payload.name)) {

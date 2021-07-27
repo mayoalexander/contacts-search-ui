@@ -25,6 +25,7 @@
           <label class="mb-0">Search by:</label>
           <div class="">
             <b-form-select
+              @change="setSearchBy()"
               v-model="searchType"
               :options="searchOptions"
               class="mt-0 w-100"
@@ -88,6 +89,10 @@ export default {
       ],
     };
   },
+  mounted () {
+    // set default search to email
+    this.setSearchBy('email');
+  },
   computed: {
     isValid() {
       let res = true;
@@ -101,6 +106,10 @@ export default {
     setSorting() {
       const value = this.sortBy;
       this.$store.commit("SET_SORT_BY", value);
+    },
+    setSearchBy() {
+      const value = this.searchType;
+      this.$store.commit("SET_SEARCH_BY", value);
     },
     validateEmail() {
       const email = this.$store.state.searchQuery;
