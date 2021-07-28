@@ -4,7 +4,7 @@
       <b-form-input
         v-model="$store.state.searchQuery"
         :placeholder="'Search ' + (searchType ? searchType + 's' : 'anything..') + '..'"
-        :state="validation"
+        :state="isValid"
         :class="{
           'invalid-form': !isValid && $store.state.searchQuery.length > minNumCharacters,
           'valid-form': isValid && $store.state.searchQuery.length > minNumCharacters,
