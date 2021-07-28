@@ -3,15 +3,22 @@
     <div class="col-md-12 mb-2">
       <b-form-input
         v-model="$store.state.searchQuery"
-        :placeholder="'Search ' + (searchType ? searchType + 's' : 'anything..') + '..'"
+        :placeholder="
+          'Search ' + (searchType ? searchType + 's' : 'anything..') + '..'
+        "
         :state="isValid"
         :class="{
-          'invalid-form': !isValid && $store.state.searchQuery.length > minNumCharacters,
-          'valid-form': isValid && $store.state.searchQuery.length > minNumCharacters,
+          'invalid-form':
+            !isValid && $store.state.searchQuery.length > minNumCharacters,
+          'valid-form':
+            isValid && $store.state.searchQuery.length > minNumCharacters,
         }"
       ></b-form-input>
       <div
-        v-if="searchType === 'email' && $store.state.searchQuery.length > minNumCharacters"
+        v-if="
+          searchType === 'email' &&
+          $store.state.searchQuery.length > minNumCharacters
+        "
         class="text-left"
       >
         <b-form-invalid-feedback :state="isValid">
