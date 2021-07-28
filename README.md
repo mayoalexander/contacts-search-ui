@@ -1,6 +1,5 @@
 Overall Application Structure
 ======
-I attempted to keep the application simple but “scalability” came up during the development process. The requirements are very simple, yet when working with User Interfaces in 2020+,
 
 Here is my implementation of a contact list Vue application. The code challenge requirements called for a simple UI for searching through a contacts list.
 Here are the basic foundational factors that I had to keep in mind for this project:
@@ -19,9 +18,13 @@ Linting & Prettier
 ======
 Leveraged ESlint and prettier to keep the format of code consistent across all application files.
 
+Vuex Store
+======
+Leveraged ESlint and prettier to keep the format of code consistent across all application files.
+
 Validation & Searching
 ======
-I used a simple regex validation that displays the format error to the user, but since I’m running the search on @keyup instead of @click button, the validation runs on the fly, and only impacts the UI visually. 
+I used a simple regex validation that displays the format error to the user, but since I’m running the search on @keyup instead of @click button, the validation runs on the fly, and only impacts the UI visually.
 
 
 
