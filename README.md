@@ -1,3 +1,6 @@
+Public Demo: [https://bisnow-contacts-ui.netlify.app/](https://bisnow-contacts-ui.netlify.app/)
+
+
 Overall Application Structure
 ======
 
@@ -20,7 +23,7 @@ Leveraged ESlint and prettier to keep the format of code consistent across all a
 
 Vuex Store
 ======
-Leveraged ESlint and prettier to keep the format of code consistent across all application files.
+Created a Vuex store to handle global functionality across multiple components. Since the store was created, I used this as a opportunity to play with saving bookmarks to a user session ($store wise)
 
 Validation & Searching
 ======
