@@ -5,7 +5,12 @@
       <vue-simple-markdown :source="readme"></vue-simple-markdown>
     </div>
     <div>
-      <b-button size="lg" @click="$router.push('/contacts')" block class="w-100">
+      <b-button
+        size="lg"
+        @click="$router.push('/contacts')"
+        block
+        class="w-100"
+      >
         View Contacts
       </b-button>
     </div>
