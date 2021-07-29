@@ -13,6 +13,15 @@ Here are the basic foundational factors that I had to keep in mind for this proj
 
 My goal was to build an interface and application structure that lays the foundation for allowing user’s to ability to fully “manage” a customers list.
 
+Basic Features:
+- Routing
+- Vuex Store Implementation
+- Searchability
+- Filtering & sorting
+- Saving Favorites to a session
+
+
+
 UI Framework
 ======
 As for the framework, I went with Bootstrap. I usually setup a SASS/LESS implementation but decided to keep the styling files to a minimum for this project.

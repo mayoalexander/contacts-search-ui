@@ -1,16 +1,11 @@
 <template>
   <div class="container text-left">
     <h4>Welcome to my Code Challenge</h4>
-    <p>Here are some of the things I did in this project:</p>
-    <ul>
-      <li>Routing</li>
-      <li>Vuex Store Implementation</li>
-      <li>Searchability</li>
-      <li>Filter/Sorting</li>
-      <li>Saving Favorites to Session</li>
-    </ul>
+    <div class="readme-content">
+      <vue-simple-markdown :source="readme"></vue-simple-markdown>
+    </div>
     <div>
-      <b-button @click="$router.push('/contacts')" block class="w-100">
+      <b-button size="lg" @click="$router.push('/contacts')" block class="w-100">
         View Contacts
       </b-button>
     </div>
@@ -19,12 +14,18 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-
+import ReadMe from "../../README.md";
 export default {
   name: "Home",
-  components: {
-    // HelloWorld,
+  data: () => {
+    return {
+      readme: ReadMe,
+    };
+  },
+  mounted() {
+    console.log({
+      readme: this.readme,
+    });
   },
 };
 </script>
