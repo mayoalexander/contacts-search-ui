@@ -1,8 +1,7 @@
 Public Demo: [https://bisnow-contacts-ui.netlify.app/](https://bisnow-contacts-ui.netlify.app/)
 
 
-Overall Application Structure
-======
+# Overall Application Structure
 
 Here is my implementation of a contact list Vue application. The code challenge requirements called for a simple UI for searching through a contacts list.
 Here are the basic foundational factors that I had to keep in mind for this project:
@@ -13,35 +12,31 @@ Here are the basic foundational factors that I had to keep in mind for this proj
 
 My goal was to build an interface and application structure that lays the foundation for allowing user’s to ability to fully “manage” a customers list.
 
-Basic Features:
+## Basic Features
 - Routing
 - Vuex Store Implementation
 - Searchability
 - Filtering & sorting
 - Saving Favorites to a session
 
+## UI Framework
 
-
-UI Framework
-======
 As for the framework, I went with Bootstrap. I usually setup a SASS/LESS implementation but decided to keep the styling files to a minimum for this project.
 
-Linting & Prettier
-======
+## Linting & Prettier
+
 Leveraged ESlint and prettier to keep the format of code consistent across all application files.
 
-Vuex Store
-======
+## Vuex Store
+
 Created a Vuex store to handle global functionality across multiple components. Since the store was created, I used this as a opportunity to play with saving bookmarks to a user session ($store wise)
 
-Validation & Searching
-======
+## Validation & Searching
+
 I used a simple regex validation that displays the format error to the user, but since I’m running the search on @keyup instead of @click button, the validation runs on the fly, and only impacts the UI visually.
 
 
 
-
-==============
 
 
 

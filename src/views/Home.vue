@@ -1,5 +1,5 @@
 <template>
-  <div class="container text-left">
+  <div class="container text-left mb-5">
     <h4>Welcome to my Code Challenge</h4>
     <div class="readme-content">
       <vue-simple-markdown :source="readme"></vue-simple-markdown>
@@ -9,7 +9,7 @@
         size="lg"
         @click="$router.push('/contacts')"
         block
-        class="w-100"
+        class="w-100 mt-3"
       >
         View Contacts
       </b-button>
